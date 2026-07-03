@@ -1,0 +1,50 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: portfolio_ai
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  prisma-migrate:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: builder
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/portfolio_ai?schema=public
+    command: npx prisma migrate deploy
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: "no"
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runner
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/portfolio_ai?schema=public
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-sk-your-openai-api-key-here}
+      RESEND_API_KEY: ${RESEND_API_KEY:-re-your-resend-api-key-here}
+      NEXT_PUBLIC_SITE_URL: http://localhost:3000
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./public:/app/public
+    depends_on:
+      prisma-migrate:
+        condition: service_completed_successfully
+
+volumes:
+  postgres_data:

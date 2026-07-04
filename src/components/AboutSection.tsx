@@ -5,7 +5,7 @@ import { useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import TerminalBlock from "@/components/TerminalBlock";
 import SectionHeading from "@/components/SectionHeading";
-import { about, stats } from "@/lib/data";
+import { about, coFounder, stats } from "@/lib/data";
 
 function AnimatedStat({ value, label }: { value: string; label: string }) {
   const ref = useRef(null);
@@ -65,6 +65,9 @@ export default function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
+            <h3 className="text-lg font-semibold text-emerald-400 mb-4 font-mono">
+              {">"} abikale
+            </h3>
             <TerminalBlock
               lines={[
                 { command: "whoami", output: "> abikale_michael_raymond" },
@@ -76,6 +79,11 @@ export default function AboutSection() {
                 { command: "echo $STATUS", output: "> building the future" },
               ]}
             />
+            <div className="mt-6 space-y-4 text-zinc-400 leading-relaxed text-sm">
+              {about.bio.slice(0, 2).map((paragraph, i) => (
+                <p key={i}>{paragraph}</p>
+              ))}
+            </div>
           </motion.div>
 
           <motion.div
@@ -83,11 +91,32 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="space-y-4 text-zinc-400 leading-relaxed"
           >
-            {about.bio.map((paragraph, i) => (
-              <p key={i}>{paragraph}</p>
-            ))}
+            <h3 className="text-lg font-semibold text-emerald-400 mb-4 font-mono">
+              {">"} martha
+            </h3>
+            <TerminalBlock
+              lines={[
+                {
+                  command: "whoami",
+                  output: "> rachael_martha_moses",
+                },
+                {
+                  command: "cat skills.txt",
+                  output:
+                    "> react, nextjs, python, fastapi,\n> nestjs, postgresql, redis, celery",
+                },
+                {
+                  command: "echo $STATUS",
+                  output: "> engineering the stack",
+                },
+              ]}
+            />
+            <div className="mt-6 space-y-4 text-zinc-400 leading-relaxed text-sm">
+              {coFounder.bio.slice(0, 2).map((paragraph, i) => (
+                <p key={i}>{paragraph}</p>
+              ))}
+            </div>
           </motion.div>
         </div>
 

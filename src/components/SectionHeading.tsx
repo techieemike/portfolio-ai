@@ -10,7 +10,7 @@ export default function SectionHeading({
   subtitle?: string;
 }) {
   return (
-    <div id={id} className="mb-12">
+    <div id={id} className="mb-12 scroll-mt-16">
       <p className="section-heading">// {label}</p>
       <h2 className="section-title">{title}</h2>
       {subtitle && <p className="section-subtitle">{subtitle}</p>}

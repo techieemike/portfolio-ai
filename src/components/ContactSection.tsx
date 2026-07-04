@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { GitBranch, Link, Mail, Send } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
-import { hero } from "@/lib/data";
+import { hero, coFounder } from "@/lib/data";
 
 export default function ContactSection() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -43,7 +43,7 @@ export default function ContactSection() {
           id="contact"
           label="contact"
           title="Let's Build Something"
-          subtitle="Have a project in mind? I'm always open to discussing new opportunities."
+          subtitle="Have a project in mind? We're always open to discussing new opportunities."
         />
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -105,7 +105,7 @@ export default function ContactSection() {
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
                 className="w-full px-4 py-3 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-100 focus:border-emerald-500 focus:outline-none transition-colors resize-none"
-                placeholder="Tell me about your project..."
+                placeholder="Tell us about your project..."
               />
             </div>
 
@@ -137,51 +137,104 @@ export default function ContactSection() {
             className="space-y-6"
           >
             <div>
-              <h3 className="text-sm font-mono text-zinc-500 mb-2">Email</h3>
-              <a
-                href={`mailto:${hero.email}`}
-                className="text-lg text-emerald-400 hover:text-emerald-300 transition-colors"
-              >
-                {hero.email}
-              </a>
+              <h3 className="text-sm font-mono text-zinc-500 mb-3">Email</h3>
+              <div className="space-y-3">
+                <div>
+                  <p className="text-xs text-zinc-600 font-mono">Abikale</p>
+                  <a
+                    href={`mailto:${hero.email}`}
+                    className="text-lg text-emerald-400 hover:text-emerald-300 transition-colors"
+                  >
+                    {hero.email}
+                  </a>
+                </div>
+                <div>
+                  <p className="text-xs text-zinc-600 font-mono">Martha</p>
+                  <a
+                    href={`mailto:${coFounder.email}`}
+                    className="text-lg text-emerald-400 hover:text-emerald-300 transition-colors"
+                  >
+                    {coFounder.email}
+                  </a>
+                </div>
+              </div>
             </div>
 
             <div>
               <h3 className="text-sm font-mono text-zinc-500 mb-3">Socials</h3>
-              <div className="flex items-center gap-4">
-                <a
-                  href={hero.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-emerald-400 hover:border-emerald-800/50 transition-all"
-                  aria-label="GitHub"
-                >
-                  <GitBranch size={20} />
-                </a>
-                <a
-                  href={hero.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-emerald-400 hover:border-emerald-800/50 transition-all"
-                  aria-label="LinkedIn"
-                >
-                  <Link size={20} />
-                </a>
-                <a
-                  href={`mailto:${hero.email}`}
-                  className="p-3 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-emerald-400 hover:border-emerald-800/50 transition-all"
-                  aria-label="Email"
-                >
-                  <Mail size={20} />
-                </a>
+              <div className="space-y-3">
+                <div>
+                  <p className="text-xs text-zinc-600 font-mono mb-2">
+                    Abikale
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <a
+                      href={hero.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-emerald-400 hover:border-emerald-800/50 transition-all"
+                      aria-label="Abikale GitHub"
+                    >
+                      <GitBranch size={20} />
+                    </a>
+                    <a
+                      href={hero.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-emerald-400 hover:border-emerald-800/50 transition-all"
+                      aria-label="Abikale LinkedIn"
+                    >
+                      <Link size={20} />
+                    </a>
+                    <a
+                      href={`mailto:${hero.email}`}
+                      className="p-3 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-emerald-400 hover:border-emerald-800/50 transition-all"
+                      aria-label="Abikale Email"
+                    >
+                      <Mail size={20} />
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <p className="text-xs text-zinc-600 font-mono mb-2">
+                    Martha
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <a
+                      href={coFounder.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-emerald-400 hover:border-emerald-800/50 transition-all"
+                      aria-label="Martha GitHub"
+                    >
+                      <GitBranch size={20} />
+                    </a>
+                    <a
+                      href={coFounder.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-emerald-400 hover:border-emerald-800/50 transition-all"
+                      aria-label="Martha LinkedIn"
+                    >
+                      <Link size={20} />
+                    </a>
+                    <a
+                      href={`mailto:${coFounder.email}`}
+                      className="p-3 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-emerald-400 hover:border-emerald-800/50 transition-all"
+                      aria-label="Martha Email"
+                    >
+                      <Mail size={20} />
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
 
             <div className="p-6 rounded-xl bg-zinc-900/50 border border-zinc-800">
               <p className="text-zinc-400 text-sm leading-relaxed">
-                I typically respond within 24 hours. Whether it's a new project,
-                collaboration opportunity, or just a conversation about AI
-                engineering — let's connect.
+                We typically respond within 24 hours. Whether it's a new
+                project, collaboration opportunity, or just a conversation about
+                AI engineering — let's connect.
               </p>
             </div>
           </motion.div>

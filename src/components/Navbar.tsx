@@ -78,18 +78,18 @@ export default function Navbar() {
     >
 
       {/* Navbar inner content */}
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
 
         {/* Logo / Brand name */}
         <a
           href="#"
           className="font-mono text-sm text-emerald-400 hover:text-emerald-300 transition-colors"
         >
-          @abikale
+          @TheBigFish Lab
         </a>
 
         {/* Desktop navigation links */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-4">
 
           {/* Loop through all nav links */}
           {navLinks.map((link) => (

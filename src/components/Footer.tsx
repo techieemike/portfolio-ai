@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="border-t border-zinc-800 py-8 px-6">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="text-sm text-zinc-500">
-          © {year} {hero.name}. All rights reserved.
+          © {year} TheBigFish Lab. All rights reserved.
         </p>
 
         <div className="flex items-center gap-4">

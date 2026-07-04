@@ -7,6 +7,9 @@ import HeroSection from "@/components/HeroSection";
 // Import the about section component
 import AboutSection from "@/components/AboutSection";
 
+// Import the team section component
+import TeamSection from "@/components/TeamSection";
+
 // Import the projects showcase section component
 import ProjectsSection from "@/components/ProjectsSection";
 
@@ -48,6 +51,9 @@ export default function Home() {
 
         {/* About me section */}
         <AboutSection />
+
+        {/* Team section */}
+        <TeamSection />
 
         {/* Portfolio projects section */}
         <ProjectsSection />

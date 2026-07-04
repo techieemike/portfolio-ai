@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Abikale Michael Raymond — Full Stack AI Engineer",
   description:
-    "Full Stack AI Engineer and Founder of TheBigFish Labs. Building intelligent systems across the full stack — from LLMs and computer vision to production-grade APIs, data pipelines, and autonomous agents.",
+    "Full Stack AI Engineer and Founder of TheBigFish Lab. Building intelligent systems across the full stack — from LLMs and computer vision to production-grade APIs, data pipelines, and autonomous agents.",
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
   openGraph: {
     title: "Abikale Michael Raymond — Full Stack AI Engineer",

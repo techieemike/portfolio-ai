@@ -79,6 +79,17 @@ export default function ProjectsSection() {
                 {project.description}
               </p>
 
+              {(project as { link?: string }).link && (
+                <a
+                  href={(project as { link?: string }).link!}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-sm text-emerald-400 hover:text-emerald-300 transition-colors mb-4"
+                >
+                  Live ↗
+                </a>
+              )}
+
               <div className="flex flex-wrap gap-2">
                 {project.tags.slice(0, 6).map((tag, j) => (
                   <span

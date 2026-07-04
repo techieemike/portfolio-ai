@@ -298,6 +298,7 @@ export const coFounderProjects = [
   {
     title: "InsightFlow AI",
     creator: "martha",
+    link: "https://insightflow-web-delta.vercel.app",
     description:
       "Full-stack data analytics platform where users upload CSV/Excel/PDF/Word files and get AI-generated insights, charts, RAG-powered chat with their data, SQL querying, and exportable reports. Deployed entirely on free-tier stack (Vercel + Supabase + Gemini).",
     tags: [

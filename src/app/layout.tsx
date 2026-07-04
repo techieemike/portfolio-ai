@@ -13,23 +13,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Abikale Michael Raymond — Full Stack AI Engineer",
+  title: "TheBigFish Lab — Full Stack AI Engineering",
   description:
-    "Full Stack AI Engineer and Founder of TheBigFish Lab. Building intelligent systems across the full stack — from LLMs and computer vision to production-grade APIs, data pipelines, and autonomous agents.",
+    "TheBigFish Lab builds AI-powered SaaS platforms across fintech, healthcare, logistics, and industrial domains. From LLMs and computer vision to production-grade APIs and autonomous agents.",
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
   openGraph: {
-    title: "Abikale Michael Raymond — Full Stack AI Engineer",
+    title: "TheBigFish Lab — Full Stack AI Engineering",
     description:
-      "Building intelligent systems across the full stack — LLMs, computer vision, data pipelines, autonomous agents.",
+      "AI-powered SaaS platforms across fintech, healthcare, logistics, and industrial domains.",
     type: "website",
     url: "/",
-    siteName: "Abikale Michael Raymond",
+    siteName: "TheBigFish Lab",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Abikale Michael Raymond — Full Stack AI Engineer",
+    title: "TheBigFish Lab — Full Stack AI Engineering",
     description:
-      "Building intelligent systems across the full stack — LLMs, computer vision, data pipelines, autonomous agents.",
+      "AI-powered SaaS platforms across fintech, healthcare, logistics, and industrial domains.",
   },
 };
 
